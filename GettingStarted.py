@@ -38,3 +38,53 @@ print(f"Minutes in that many days: {minutes}")
 
 print()
 
+#Please write a program which asks the user for an integer number. The program should print out "Orwell" if the number is exactly 1984, and otherwise do nothing.
+
+number = int(input("Please type in a 4 digit number: "))
+if number == 1984:
+    print("Orwell")
+else:
+    print()
+
+print()
+#Please write a program which asks the user for an integer number. If the number is less than zero, the program should print out the number multiplied by -1. Otherwise the program prints out the number as is.
+
+number = int(input("Please type in a number: "))
+if number < 0:         
+    print(number * -1)      
+else:
+    print(number)
+
+print()
+#Please write a program which asks for the user's name. If the name is anything but "Jerry", the program then asks for the number of portions and prints out the total cost. The price of a single portion is 5.90.
+
+name = input("What is your name? ")
+if name == "Jerry":
+    print("Next please?")
+else:
+    count=int(input("How many portions wuold you like? "))
+    total = count * 5.90
+    print(f"Total cost for {count} portions: ${total}")
+    print("Next please?")
+
+print()
+#Please write a program which asks the user for an integer number. The program should then print out the magnitude of the number according to the following examples.
+
+number = int(input("Please type in a number: "))
+
+if number < 1000 and 100 and 10:
+    print("This number is smaller than 1000")
+    print("This number is smaller than 100")
+    print("This number is smaller than 10")
+    print("Thank You!")
+elif number < 1000 and 100:
+    print("This number is smaller than 1000")
+    print("This number is smaller than 100")
+    print("Thank You!") 
+elif number < 1000:
+    print("This number is smaller than 1000")
+    print("Thank You!")   
+else:
+    print("Thank You!") 
+
+print()
