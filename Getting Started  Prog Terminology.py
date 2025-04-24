@@ -1,17 +1,21 @@
-#getting started part 3
 print("From Programming Terminology")
 
 print()
 #The following program contains several syntactic errors. Please fix the program so that the syntax is in order and the program works as specified by the examples below.
+number = int(input("Please type in a number: "))
+if number > 199:
+  print("The number was greater than one hundred")
+  print("Have a nice day!")
+elif number > 100:
+  number - 100
+  print("Now its value has decreased by one hundred")
+  print(F"Its value is now {number}")
+  print(F"{number} must be my lucky number!")
+  print("Have a nice day!")
+else:
+  print(F"{number} must be my lucky number!")
+  print("Have a nice day!")
 
-  number = input("Please type in a number: ")
-  if number>100
-    print("The number was greater than one hundred")
-    number - 100
-    print("Now its value has decreased by one hundred)
-     print("Its value is now"+ number)
- print(number + " must be my lucky number!")
- print("Have a nice day!)
        
 """ Sample output:
 
@@ -29,6 +33,8 @@ Its value is now 1
 Have a nice day! """
 
 #Please write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.
+
+
 
 """ Examples of expected behaviour:
 
