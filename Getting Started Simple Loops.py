@@ -1,20 +1,16 @@
 #getting started part 6
-print("" \
-"Simple Loops")
+print("Simple Loops")
 
-#Let's create a program along the lines of the example above. This program should print out the message "hi" and then ask "Shall we continue?" until the user inputs "no". Then the program should print out "okay then" and finish. Please have a look at the example below.
+#Let's create a program that will print out the message "hi" and then ask "Shall we continue?" until the user inputs "no". Then the program should print out "okay then" and finish. Please have a look at the example below.
 
-""" Sample output
-
-hi
-Shall we continue? yes
-hi
-Shall we continue? oui
-hi
-Shall we continue? jawohl
-hi
-Shall we continue? no
-okay then """
+print('hi')
+answer = input('Shall we continue? ')
+while answer != "no":
+  print('hi')
+  input('Shall we continue? ')
+  if answer == 'no':
+    break
+print("okay then") 
 
 
 #Please write a program which asks the user for integer numbers.
@@ -25,25 +21,18 @@ okay then """
 # Below you'll find a reminder of how the sqrt function is used. Remember to import it in the beginning of the program.
 
 # sqrt function will not work without this line in the beginning of the program
-""" from math import sqrt
 
-print(sqrt(9))
-Sample output
+from math import sqrt
 
-3.0
-An example of expected behaviour of your program:
-
-Sample output
-Please type in a number: 16
-4.0
-Please type in a number: 4
-2.0
-Please type in a number: -3
-Invalid number
-Please type in a number: 1
-1.0
-Please type in a number: 0
-Exiting... """
+integer = int(input('Please type in a number: '))
+if integer < 0:
+  print('Invalid number')
+  print(input('Please type in a number: ')) 
+elif integer == 0:
+  print("Exiting...")
+else: 
+  print(sqrt(integer))
+ 
 
 #This program should print out a countdown. The code is as follows:
 # However, the program doesn't quite work. Please fix it.
@@ -51,21 +40,11 @@ number = 5
 print("Countdown!")
 while True:
   print(number)
-  number = number - 1
-  if number > 0:
+  number -= 1
+  if number == 0:
     break
-
 print("Now!")
 
-""" Sample output
-
-Countdown!
-5
-4
-3
-2
-1
-Now! """
 
 #Please write a program which
 # Asks for the password.
@@ -73,38 +52,35 @@ Now! """
 # If the two passwords match, prints "Correct!".
 # Otherwise prints "They do not match!".
 
-""" Sample Output:
+while True:
+    password = input("Please type in the password: ")
+    password2 = input("Repeat the password: ")
+    if password == password2:
+        break
+    print("They do not match!")
 
-Please type in the password: Secret
-Repeat the password: Secret
-Correct!
-
-Sample Output:
-
-Please type in the password: Secret
-Repeat the password: secret
-They do not match! """
+print("Correct!")
 
 
 #Please write a program which keeps asking the user for a PIN code until they type in the correct one, which is 4321. The program should then print out the number of times the user tried different codes.
+count = 0
+while True:
+  code = 4321
+  code2 = int(input("Please type in your PIN: "))
+  if code == code2:
+    break
+  count += 1
+  print("Incorrect...try again")
 
-""" Sample output
+if count == 0:
+  print("Correct! It only took you one single attempt!")
+else:
+  print(f"Correct! It took you {count} attempts")
 
-PIN: 3245
-Wrong
-PIN: 1234
-Wrong
-PIN: 0000
-Wrong
-PIN: 4321
-Correct! It took you 4 attempts
 
-Sample output
-
-PIN: 4321
-Correct! It only took you one single attempt! """
 
 #Please write a program which asks the user for a year, and prints out the next leap year.
+
 
 
 """ Sample output

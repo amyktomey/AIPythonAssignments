@@ -2,6 +2,9 @@ print("Boolean values and Boolean expressions")
 
 #Please write a program which asks the user for two numbers and an operation. If the operation is add, multiply or subtract, the program should calculate and print out the result of the operation with the given numbers. If the user types in anything else, the program should print out nothing.
 
+
+#Please write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out "Brr! It's cold in here!". The formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.
+
 """ Sample output:
 
 Please type in a temperature (F): 101
@@ -13,7 +16,6 @@ Please type in a temperature (F): 21
 21 degrees Fahrenheit equals -6.111111111111111 degrees Celsius
 Brr! It's cold in here!
  """
-#Please write a program which asks the user for a temperature in degrees Fahrenheit, and then prints out the same in degrees Celsius. If the converted temperature falls below zero degrees Celsius, the program should also print out "Brr! It's cold in here!". The formula for converting degrees Fahrenheit to degrees Celsius can be found easily by any search engine of your choice.
 
 #Please write a program which asks for the hourly wage, hours worked, and the day of the week. The program should then print out the daily wages, which equal hourly wage multiplied by hours worked, except on Sundays when the hourly wage is doubled.
 

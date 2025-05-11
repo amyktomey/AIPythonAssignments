@@ -11,11 +11,13 @@ print("That's all folks!")
 print ()
 
 print("Are you ready?")
-number = int(input("Please type in a number: "))
+number = int(input("Please type in a number: "))    
 while number > 0:
-  print(number)
-  number = number - 1
-print("Now!") 
+    print(number)
+    number -= 1
+    if number == 0:
+        break
+print("Now!")
 
 """ print("Are you ready?")
 number = int(input("Please type in a number: "))
@@ -34,20 +36,3 @@ Please type in a number: 5
 1
 Now """
 
-
-print()
-
-
-
-
-
-
-
-
-
-print("Are you ready?")
-number = int(input("Please type in a number: "))
-while number > 0:
-    print(number)
-    number -= 1
-print("Now!")

@@ -16,41 +16,16 @@ else:
   print(F"{number} must be my lucky number!")
   print("Have a nice day!")
 
-       
-""" Sample output:
-
-Please type in a number: 13
-13 must be my lucky number!
-Have a nice day!
-
-Sample output:
-
-Please type in a number: 101
-The number was greater than one hundred
-Now its value has decreased by one hundred
-Its value is now 1
-1 must be my lucky number!
-Have a nice day! """
 
 #Please write a program which asks the user for a word and then prints out the number of characters, if there was more than one typed in.
 
+word = input('Please type in a word: ')
+count = len(word)
+while count > 1:
+  print(f'There are {count} letters in the word {word}')
+  break
+print('Thank you!')
 
-
-""" Examples of expected behaviour:
-
-Sample output
-Please type in a word: hey
-There are 3 letters in the word hey
-Thank you!
-
-Sample output
-Please type in a word: banana
-There are 6 letters in the word banana
-Thank you!
-
-Sample output
-Please type in a word: b
-Thank you! """
 
 #When programming in Python, often we need to change the data type of a value. For example, a floating point number can be converted into an integer with the function int:
 
