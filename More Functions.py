@@ -8,10 +8,7 @@ def line(number, string):
 line(7, "%")
 line(10, "LOL")
 line(3, "")
-# Sample output
-# %%%%%%%
-# LLLLLLLLLL   LOL?
-# ***
+
 
 """ Please write a function named box_of_hashes, which prints out a rectangle of hash characters. The function takes one argument, which specifies the height of the rectangle. The rectangle should be ten characters wide.
 
@@ -76,7 +73,6 @@ def line(number, string):
 def triangle(height):
     for number in range(height):
         line(number, "#")
-        number += 1
 
 triangle(6)
 print()
@@ -91,7 +87,6 @@ def line(number, string):
 def shape(width, char, height, filler ):
     for number in range(width):
         line(number, char)
-        number += 1
     
     number = height
     while height != 0:
@@ -103,3 +98,45 @@ print()
 shape(2, "o", 4, "+")
 print()
 shape(3, ".", 0, ",")
+
+""" A spruce
+Please write a function named spruce, which takes one argument. The function prints out the text a spruce!, and the a spruce tree, the size of which is specified by the argument."""
+
+def spruce(height):
+    print("a spruce")
+    for number in range(height):
+       print (" " *(height-number) + "*"*(2*number-1))
+    print (" " * (height-1) + "*")
+
+spruce(3)
+spruce(5)
+
+
+# Calling spruce(3) should print out:
+
+# Sample output
+# a spruce!
+#   *
+#  ***
+# *****
+#   *
+# Calling spruce(5) should print out:
+
+# Sample output
+# a spruce!
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#     *
+""" NB: To the left of the spruce there should be exactly the right amount of whitespace. If the shape of the spruce looks correct, but the left edge of the tree is not touching the left edge of the text area in the terminal, the tests will not accept the solution. " """""
+
+""" Please write a function named greatest_number, which takes three arguments. The function returns the greatest in value of the three. """
+
+# def greatest_number(num1, num2, num3):
+
+#test the code
+# (greatest_number(3, 4, 1)) # 4
+# (greatest_number(99, -4, 7)) # 99
+# (greatest_number(0, 0, 0)) # 0
