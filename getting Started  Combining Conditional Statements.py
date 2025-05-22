@@ -5,99 +5,76 @@ print("Combining Conditional Statements")
 
 #In a similar fashion, if the name is Morty or Ferdie, the program should recognise the user as one of Mickey Mouse's nephews.
 
-""" Sample output
-
-Please type in your name: Morty
-I think you might be one of Mickey Mouse's nephews.
-
-Sample output
-
-Please type in your name: Huey
-I think you might be one of Donald Duck's nephews.
-
-Sample output
-
-Please type in your name: Ken """
+name = input("Please type in your name:")
+if name != "Huey" or "Dewey" or "Louie" or "Morty" or "Ferdie":
+    print()
+elif name == "Huey" or "Dewey" or "Louie":
+    print("I think you might be one of Donald Duck's nephews.")
+else:
+    if name == "Morty" or "Ferdie":
+        print("I think you might be one of Mickey Mouse's nephews.")
 
 #The table below outlines the grade boundaries on a certain university course. Please write a program which asks for the amount of points received and then prints out the grade attained according to the table.
 
-""" points    grade
-< 0    impossible!
-0-49    fail
-50-59    1
-60-69    2
-70-79    3
-80-89    4
-90-100    5
-> 100    impossible!
-Sample output
+points = int(input("How many points [0-100]:"))
+if points > 100:
+    print("Grade: impossible!")
+elif points > 90:  # 90-100    5
+    print("Grade: 5")
+elif points > 80:  # 80-89    4
+    print("Grade: 4")
+elif points > 70:  # 70-79    3
+    print("Grade: 3")
+elif points > 60:  # 60-69    2
+    print("Grade: 2")
+elif points > 50:  # 50-59    1
+    print("Grade: 1")
+elif points >=0:  # 0-49    fail
+    print("fail")
+else:
+    if points <0:
+        print("Grade: impossible! ")
 
-How many points [0-100]: 37
-Grade: fail
-
-Sample output
-
-How many points [0-100]: 76
-Grade: 3
-
-Sample output
-
-How many points [0-100]: -3
-Grade: impossible! """
-
+print()
 #Please write a program which asks the user for an integer number. If the number is divisible by three, the program should print out Fizz. If the number is divisible by five, the program should print out Buzz. If the number is divisible by both three and five, the program should print out FizzBuzz.
 
-""" Number: 9
-Fizz
+number = int(input("Please input an integer number: "))
+if number % 3 == 0 and number % 5 == 0:
+    print("Fizz Buzz")
+elif number % 3 == 0:
+    print("Fizz")
+elif number % 5 == 0:
+    print("Buzz")
+else:
+    print()
 
-Sample output
-
-Number: 7
-
-Sample output
-
-Number: 20
-Buzz
-
-Sample output
-
-Number: 45
-FizzBuzz
- """
-
+print()
 #Generally, any year that is divisible by four is a leap year. However, if the year is additionally divisible by 100, it is a leap year only if it also divisible by 400.
 
 #Please write a program which asks the user for a year, and then prints out whether that year is a leap year or not.
 
-""" Please type in a year: 2011
-That year is not a leap year.
+year = int(input("Please type in a year: "))
+if year % 4 == 0:
+    print("That year is a leap year.")
+else:
+    print("That year is not a leap year.")
 
-Sample output
-
-Please type in a year: 2020
-That year is a leap year.
-
-Sample output
-
-Please type in a year: 1800
-That year is not a leap year. """
+print()        
 
 #Please write a program which asks the user for three letters. The program should then print out whichever of the three letters would be in the middle if the letters were in alphabetical order.
 # You may assume the letters will be either all uppercase, or all lowercase.
 
-""" Sample output
+letter1 = input("PLease enter the first letter:")
+letter2 = input("PLease enter the second letter: ")
+letter3 = input("PLease enter the third letter: ")
+#put letters in alpha order
+letters = (letter1, letter2, letter3)
+alpha_order=sorted(letters)
+print(f"1st letter: {letter1}")
+print(f"2nd letter: {letter2}")
+print(f"3rd letter: {letter3}")
+print(f"The letter in the middle is {alpha_order[1]}")
 
-1st letter: x
-2nd letter: c
-3rd letter: p
-The letter in the middle is p
-
-Sample output
-
-1st letter: C
-2nd letter: B
-3rd letter: A
-The letter in the middle is B """
 
 #Some say paying taxes makes Finns happy, so let's see if the secret of happiness lies in one of the taxes set out in Finnish tax code.
 #According to the Finnish Tax Administration, a gift is a transfer of property to another person against no compensation or payment. If the total value of the gifts you receive from the same donor in the course of 3 years is €5,000 or more, you must pay gift tax.
@@ -113,16 +90,25 @@ So, for a gift of 6 000 euros the recipient pays a tax of 180 euros (100 + (6 00
 
 #Please write a program which calculates the correct amount of tax for a gift from a close relative. Have a look at the examples below to see what is expected. Notice the lack of thousands separators in the input values - you may assume there will be no spaces or other thousands separators in the numbers in the input, as we haven't yet covered dealing with these.
 
-""" Sample output
 
-Value of gift: 3500
-No tax!
+gift = int(input("How much is you gift? "))
 
-Sample output
+if gift > 1000000:
+    taxes = 142000 + ((gift - 1000000) * .17)
+elif gift > 200000:
+    taxes = 22100 + ((gift - 200000) * .15)
+elif gift > 55000:
+    taxes = 4700 + ((gift - 55000) * .12)
+elif gift > 25000:
+    taxes = 1700 + ((gift - 25000) * .10)
+elif gift > 5000:
+    taxes = 1700 + ((gift - 25000) * .8)
+else:
+    if gift < 5000:
+        print(f"Value of gift: {gift}")
+        print("No tax!")
+        print()
+        exit
 
-Value of gift: 5000
-Amount of tax: 100.0 euros
-
-Sample output
-
-Value of gift: 27500 """
+print(f"Value of gift: {gift}")
+print(f"Amount of tax: {taxes} euros")

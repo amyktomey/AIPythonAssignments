@@ -81,55 +81,63 @@ else:
 
 #Please write a program which asks the user for a year, and prints out the next leap year.
 
+inputyear = int(input("please type in a year: "))
+year = inputyear
+while True:
+  year+=1
+  if year % 100 == 0:
+    if year % 400 == 0:
+      break
+  elif year % 4 == 0:
+    break
 
-
-""" Sample output
-
-Year: 2023
-The next leap year after 2023 is 2024
-
-Sample output
-
-Year: 2024
-The next leap year after 2024 is 2028 """
-
+print(f"Year: {inputyear}")
+print(f"The next leap year after {inputyear} is {year}")
 
 #---------------------------------------------------------------------------------
 #Part 1
 #Please write a program which keeps asking the user for words. If the user types in end, the program should print out the story the words formed, and finish.
 
-""" Sample output
-
-Please type in a word: Once
-Please type in a word: upon
-Please type in a word: a
-Please type in a word: time
-Please type in a word: there
-Please type in a word: was
-Please type in a word: a
-Please type in a word: girl
-Please type in a word: end
-Once upon a time there was a girl """
-
+story = ""
+while True:
+    word = input("Please type in a word: ")
+    if(word == 'end'):
+        break
+    else:
+        story += word + " "
+if story:
+  print(story)
+   
 #Part 2
 
 #Change the program so that the loop ends also if the user types in the same word twice in a row.
 
-""" Please type in a word: Once
-Please type in a word: upon
-Please type in a word: a
-Please type in a word: time
-Please type in a word: there
-Please type in a word: was
-Please type in a word: a
-Please type in a word: girl
-Please type in a word: end
-Once upon a time there was a girl """
-
+story = ""
+prev_word = ""
+while True:
+    word = input("Please type in a word: ")
+    if(word == 'end'):
+        break
+    elif prev_word.lower() == word.lower():
+        break
+    else:
+        story += word + " "
+        prev_word = word
+if story:
+  print(story)
+   
 
 #-----------------------------------------------------------------------------------
 #Pre-task
 # Please write a program which asks the user for integer numbers. The program should keep asking for numbers until the user types in zero.
+
+number = int(input("Please type in integer numbers. Type in 0 to finish."))
+while number != 0:
+  if number != 0:
+    print(f"Number: {number}")
+  else:
+    break
+print("Number: 0")
 
 """ Sample output
 
@@ -141,7 +149,19 @@ Number: -2
 Number: 0 """
 
 #Part 1: Count
+
 # After reading in the numbers the program should print out how many numbers were typed in. The zero at the end should not be included in the count. You will need a new variable here to keep track of the numbers typed in.
+
+number = int(input("Please type in integer numbers. Type in 0 to finish. "))
+count = 0
+while True:
+  if number != 0:
+    print(f"Number: {number}")
+    count+=1
+  else:
+     break
+print("Number: 0")
+print(f"Numbers typed in {count} ")
 
 """ Sample output
 
@@ -149,7 +169,21 @@ Number: 0 """
 Numbers typed in 4 """
 
 #Part 2: Sum
-# The program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation.
+# The program should also print out the sum of all the numbers typed in. The zero at the end should not be included in the calculation. 
+
+number = int(input("Please type in integer numbers. Type in 0 to finish. "))
+count = 0
+numbers = " "
+while number != 0:
+  print(f"Number: {number}")
+  count+=1
+  break
+total = sum(numbers)
+print("Number: 0")
+print(f"Numbers typed in {count} ")
+print(f"The sum of the numbers is {total} ")
+
+
 # The program should now print out the following:
 
 """ Sample output
@@ -160,6 +194,19 @@ The sum of the numbers is 34 """
 
 #Part 3: Mean
 # The program should also print out the mean of the numbers. The zero at the end should not be included in the calculation. You may assume the user will always type in at least one valid non-zero number.
+number = int(input("Please type in integer numbers. Type in 0 to finish. "))
+count = 0
+numbers = " "
+while number != 0:
+  print(f"Number: {number}")
+  count+=1
+  break
+total = sum(numbers)
+average = total/len(numbers)
+print("Number: 0")
+print(f"Numbers typed in {count} ")
+print(f"The sum of the numbers is {total} ")
+print(f"The mean of the numbers is({average})")
 
 """ Sample output
 
@@ -170,6 +217,26 @@ The mean of the numbers is 8.5 """
 
 #Part 4: Positives and negatives
 # The program should also print out statistics on how many of the numbers were positive and how many were negative. The zero at the end should not be included in the calculation.
+
+number = int(input("Please type in integer numbers. Type in 0 to finish. "))
+count = 0
+numbers = " "
+while number != 0:
+  print(f"Number: {number}")
+  count+=1
+  break
+total = sum(numbers)
+average = total/len(numbers)
+posnum = 0
+for int in numbers:
+   if int > 0:
+    posnum += 1
+
+print("Number: 0")
+print(f"Numbers typed in {count} ")
+print(f"The sum of the numbers is {total} ")
+print(f"The mean of the numbers is({average})")
+print(f"Positive numbers {posnum}")
 
 """ Sample output
 
